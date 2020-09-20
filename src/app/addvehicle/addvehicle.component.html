@@ -1,0 +1,22 @@
+<div class="col-md-6">
+    <h2 class="text-center">Add Vehicle</h2>
+    <form>
+
+        <div class="form-group">
+            <label for="residentId">Resident Id: </label>
+            <input class="form-control" placeholder="id" name="id" id="residentId" [(ngModel)]="user.residentId">
+        </div>
+    
+        <div class="form-group">
+            <label for="type">Type: </label>
+            <input class="form-control" placeholder="type" name="type" id="type" [(ngModel)]="user.vehicleType">
+        </div>
+        
+        <div class="form-group">
+            <label for="registrationNo">Registration No: </label>
+            <input class="form-control" placeholder="num" name="num" id="registrationNo" [(ngModel)]="user.registrationNo">
+        </div>
+    
+      <button class="btn btn-success" (click)="addVehicle()">Add Vehicle</button>
+    </form>
+    </div>

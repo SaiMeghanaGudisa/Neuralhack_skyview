@@ -1,0 +1,22 @@
+<div class="col-md-6">
+    <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Resident Id</th>
+      <th>Vehicle Type</th>
+      <th>Registration No</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+            <td>{{vehicle.residentId}}</td>            
+            <td>{{vehicle.vehicleType}}</td>
+            <td>{{vehicle.registrationNo}}</td>
+
+            <!-- <td><button class="btn btn-success" (click)="updateVehicle(vehicle)"> Update Vehicle details</button></td> -->
+            </tr>
+    </tbody>
+      </table>
+  
+    </div>
