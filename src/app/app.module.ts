@@ -7,19 +7,23 @@ import { HeaderComponent } from './header/header.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { AddvehicleComponent } from './addvehicle/addvehicle.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MyVehiclesComponent } from './my-vehicles/my-vehicles.component';
 
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     VehicleComponent,
-    AddvehicleComponent
+    AddvehicleComponent,
+    MyVehiclesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,9 +3,10 @@ import { HttpClient } from '@angular/common/http';
 
 export class Vehicle{
   constructor(
-    public residentId: number,
-    public vehicleType: number,
-    public registrationNo: string
+    public residentId: string,
+    public vehicleType: string,
+    public registrationNo: string,
+    public vehicleModel: string,
   ) {} 
 }
 
