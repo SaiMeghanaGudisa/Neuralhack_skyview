@@ -1,16 +1,16 @@
 <div class="col-md-6">
   <h2 class="text-center">Add Vehicle</h2>
-  <form (ngSubmit)="addVehicle()" #vehiclesForm="ngForm">
+  <form #vehiclesForm="ngForm" action="post">
 
     <div class="form-group">
       <label for="residentId">Resident Id: </label>
-      <input class="form-control" placeholder="id" name="id" id="residentId" [(ngModel)]="user.residentId">
+      <input class="form-control" type="text" placeholder="id" name="id" id="residentId" [(ngModel)]="user.residentId">
 
     </div>
 
     <div class="form-group">
       <label for="type"><span class="asterisk">*</span>Type: </label>
-      <input class="form-control" type="number" placeholder="Enter 2 or 4 wheeler" name="type" #type="ngModel" id="type" 
+      <input class="form-control" type="text" placeholder="Enter 2 or 4 wheeler" name="type" #type="ngModel" id="type" 
       required minlength="1" [(ngModel)]="user.vehicleType" required>
       <div *ngIf="type.invalid && (type.dirty || type.touched)" class="alert alert-danger">
         <div *ngIf="type.errors.required">
@@ -35,21 +35,21 @@
     </div>
 
     <div class="form-group">
-      <label for="vehicleModel"><span class="asterisk">*</span>Vehicle Model: </label>
-      <input class="form-control" type="text" placeholder="Enter vehicle model here" name="model" #name="ngModel" 
-      required minlength="5" id="vehicleModel" [(ngModel)]="user.vehicleModel" required>
-      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-        <div *ngIf="name.errors.required">
+      <label for="vehicleMake"><span class="asterisk">*</span>Vehicle Make: </label>
+      <input class="form-control" type="text" placeholder="Enter vehicle model here" name="make" #make="ngModel" 
+      required minlength="4" id="vehicleMake" [(ngModel)]="user.vehicleMake" required>
+      <div *ngIf="make.invalid && (make.dirty || make.touched)" class="alert alert-danger">
+        <div *ngIf="make.errors.required">
           Vehicle model is required.
         </div>
-        <div *ngIf="name.errors.minlength">
-          Model name must be at least 5 characters long.
+        <div *ngIf="make.errors.minlength">
+          Model name must be at least 4 characters long.
         </div>
       </div>
     </div>
 
     <div class="form-group">
-    <button class="btn btn-success" [disabled]="!vehiclesForm.form.valid" (click)="addVehicle()">Add Vehicle</button>
+    <button class="btn btn-success" [disabled]="!vehiclesForm.form.valid" (click)="addVehicle()">Add</button>
   </div>
   </form>
 </div>

@@ -21,6 +21,18 @@ export class VehicleComponent implements OnInit {
     this.vehicles = response;
   }
 
+  deleteVehicle(vehicle: Vehicle): void{
+    this.httpClientService.deleteVehicle(vehicle)
+    .subscribe(data => {
+        this.vehicles = this.vehicles.filter(u => u !== vehicle);
+      });
+  }
+  
+  updateVehicle(vehicle: Vehicle): void{
+    this.httpClientService.updateVehicle(vehicle)
+    .subscribe(date => {});
+  }
+
 
   }
 

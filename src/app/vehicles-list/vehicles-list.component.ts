@@ -1,26 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
-
+import { HttpClientService} from '../service/http-client.service';
 @Component({
   selector: 'app-vehicles-list',
   templateUrl: './vehicles-list.component.html',
   styleUrls: ['./vehicles-list.component.css']
 })
+
 export class VehiclesListComponent implements OnInit {
-  userTable: FormGroup;
+ userTable: FormGroup;
   control: FormArray;
   mode: boolean;
   touchedRows: any;
-  constructor(private fb: FormBuilder) {}
-
+  
+  // user: Vehicle = new Vehicle('','','','');
+  constructor(private fb: FormBuilder,public httpClientService: HttpClientService) {} 
   ngOnInit(): void {
-    this.touchedRows = [];
+    this.touchedRows = {};
     this.userTable = this.fb.group({
       tableRows: this.fb.array([])
-    });
+  });
     this.addRow();
   }
-
+  
   ngAfterOnInit() {
     this.control = this.userTable.get('tableRows') as FormArray;
   }
@@ -65,10 +67,26 @@ export class VehiclesListComponent implements OnInit {
   submitForm() {
     const control = this.userTable.get('tableRows') as FormArray;
     this.touchedRows = control.controls.filter(row => row.touched).map(row => row.value);
-    console.log(this.touchedRows);
+    //console.log(this.touchedRows);
+    console.log(this.userTable.value);
+    alert(this.userTable.value);
+    //alert(this.touchedRows);
+    this.httpClientService.addVehicle(this.userTable.value)
+    .subscribe(data => {
+      alert('vehicle added successfully');
+    });
   }
+
+  // addVehicle(): void {
+  //   console.log(this.user);
+  //   this.httpClientService.addVehicle(this.user)
+  //   .subscribe(data => {
+  //     alert('vehicle added successfully');
+  //   });
+  // }
 
   // toggleTheme() {
   //   this.mode = !this.mode;
   // }
 }
+

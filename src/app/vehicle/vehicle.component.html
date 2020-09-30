@@ -5,7 +5,7 @@
       <th>Resident Id</th>
       <th>Vehicle Type</th>
       <th>Registration No</th>
-      <th>Vehicle Model</th>
+      <th>Vehicle Make</th>
       
       </tr>
     </thead>
@@ -14,8 +14,10 @@
             <td>{{vehicle.residentId}}</td>            
             <td>{{vehicle.vehicleType}}</td>
             <td>{{vehicle.registrationNo}}</td>
-            <td>{{vehicle.vehicleModel}}</td>
-            <!-- <td><button class="btn btn-success" (click)="updateVehicle(vehicle)"> Update Vehicle details</button></td> -->
+            <td>{{vehicle.vehicleMake}}</td>
+             <td><button class="btn btn-success" (click)="deleteVehicle(vehicle)"> Delete Vehicle</button></td> 
+             <td><button class="btn btn-success" (click)="updateVehicle(vehicle)"> Update Vehicle</button></td> 
+
             </tr>
     </tbody>
       </table>

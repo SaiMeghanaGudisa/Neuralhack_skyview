@@ -29,13 +29,13 @@
               <td>
                 <mat-form-field appearance="standard">
                   <!-- <input matInput type="text" formControlName="name"> -->
-                  <input matInput type="number" formControlName="residentId">
+                  <input matInput type="text" formControlName="residentId">
                 </mat-form-field>
               </td>
               <td>
                 <mat-form-field appearance="standard">
                   <!-- <input matInput type="email" formControlName="email"> -->
-                  <input matInput type="number" formControlName="vehicleType">
+                  <input matInput type="text" formControlName="vehicleType">
                   <mat-hint>2 or 4 wheeler</mat-hint>
                 </mat-form-field>
               </td>
@@ -104,6 +104,7 @@
         </div>
       </form>
       <div class="output">
-        <p>Form Data:  {{userTable.value | json}}</p>
-          <p>Is Valid: {{userTable.valid}}</p>
+        <p>{{userTable.value}}</p>
+          <!-- <p>Form Data:  {{userTable}}</p> -->
+          <!-- <p>Is Valid: {{userTable.valid}}</p> --> 
       </div>
