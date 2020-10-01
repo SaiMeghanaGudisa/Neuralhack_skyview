@@ -1,0 +1,57 @@
+<div class="col-md-6 offset-md-3">
+    <h2 class="text-center">Update Vehicle</h2>
+    <form #vehiclesForm="ngForm" (ngSubmit)="updateVehicle()">
+  
+      <div class="form-group">
+        <label for="residentId">Resident Id: </label>
+        <input class="form-control" type="text" placeholder="id" name="id" id="residentId" [(ngModel)]="user.residentId">
+  
+      </div>
+  
+      <div class="form-group">
+        <label for="type"><span class="asterisk">*</span>Type: </label>
+        <input class="form-control" type="text" placeholder="Enter 2 or 4 wheeler" name="type" #type="ngModel" id="type" 
+        required minlength="1" [(ngModel)]="user.vehicleType" required>
+        <div *ngIf="type.invalid && (type.dirty || type.touched)" class="alert alert-danger">
+          <div *ngIf="type.errors.required">
+            Vehicle type is required.
+          </div>       
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="registrationNo"><span class="asterisk">*</span>Registration No: </label>
+        <input class="form-control" type="text" placeholder="Enter registration number here" name="num" #num="ngModel" 
+        id="registrationNo" required minlength="8" [(ngModel)]="user.registrationNo" required>
+  
+        <div *ngIf="num.invalid && (num.dirty || num.touched)" class="alert alert-danger">
+          <div *ngIf="num.errors.required">
+            Vehicle Registration No is required.
+          </div>
+          <div *ngIf="num.errors.minlength">
+            Registration No must be at least 8 characters long.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="vehicleMake"><span class="asterisk">*</span>Vehicle Make: </label>
+        <input class="form-control" type="text" placeholder="Enter vehicle model here" name="make" #make="ngModel" 
+        required minlength="4" id="vehicleMake" [(ngModel)]="user.vehicleMake" required>
+        <div *ngIf="make.invalid && (make.dirty || make.touched)" class="alert alert-danger">
+          <div *ngIf="make.errors.required">
+            Vehicle model is required.
+          </div>
+          <div *ngIf="make.errors.minlength">
+            Model name must be at least 4 characters long.
+          </div>
+        </div>
+      </div>
+  
+      <!-- <div class="form-group">
+      <button class="btn btn-success" [disabled]="!vehiclesForm.form.valid" (click)="addVehicle()">Add</button>
+    </div> -->
+    <button class="btn btn-success" [disabled]="!vehiclesForm.form.valid">Update</button>
+    </form>
+  </div>
+  

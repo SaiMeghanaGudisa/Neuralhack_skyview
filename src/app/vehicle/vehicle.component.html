@@ -1,13 +1,15 @@
-<div class="col-md-6">
+ <div class="col-md-10"> 
     <table class="table table-striped">
     <thead>
+      <br><br>
     <tr>
       <th>Resident Id</th>
       <th>Vehicle Type</th>
       <th>Registration No</th>
       <th>Vehicle Make</th>
-      
-      </tr>
+      &nbsp;&nbsp;
+      <button class="btn btn-info" (click)="add()">Add</button>
+    </tr>
     </thead>
     <tbody>
         <tr *ngFor="let vehicle of vehicles">
@@ -15,8 +17,9 @@
             <td>{{vehicle.vehicleType}}</td>
             <td>{{vehicle.registrationNo}}</td>
             <td>{{vehicle.vehicleMake}}</td>
-             <td><button class="btn btn-success" (click)="deleteVehicle(vehicle)"> Delete Vehicle</button></td> 
-             <td><button class="btn btn-success" (click)="updateVehicle(vehicle)"> Update Vehicle</button></td> 
+            
+             <td><button class="btn btn-danger" (click)="deleteVehicle(vehicle.id)"> Delete</button></td> 
+             <td><button class="btn btn-success" (click)="updateVehicle(vehicle.id)"> Update</button></td> 
 
             </tr>
     </tbody>

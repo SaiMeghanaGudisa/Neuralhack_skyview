@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 //import { exit } from 'process';
 // import { ControlContainer } from '@angular/forms';
 
 export class Vehicle{
   constructor(
+    public id: string,
     public residentId: string,
     public vehicleType: string,
     public registrationNo: string,
@@ -18,30 +20,30 @@ export class Vehicle{
 })
 export class HttpClientService {
 
+  private baseUrl = 'http://localhost:9090/vehicle/getvehicles';
   constructor(private httpClient: HttpClient) { }
   count = 0;
-  getVehicles()
+  getVehicles(): Observable<Vehicle[]>
   {
     return this.httpClient.get<Vehicle[]>('http://localhost:9090/vehicle/getvehicles');
   }
+  getVehicle(id: number): Observable<any> {
+    return this.httpClient.get('http://localhost:9090/vehicle/getvehicles/'+ id);
+  }
   
-  public updateVehicle(vehicle)
+  public updateVehicle(id, vehicle)
   {
     console.log('vehicle details updated');
-    return this.httpClient.put<Vehicle>('http://localhost:9090/vehicle/updatevehicle', vehicle);
+    return this.httpClient.put(`${this.baseUrl}/${id}`,vehicle);
   }
 
-  public deleteVehicle(vehicle)
+  deleteVehicle(id)
   {
     this.count--;
     console.log(this.count + 'vehicle details deleted');
-    return this.httpClient.delete<Vehicle>('http://localhost:9090/vehicle/getvehicles/'+ vehicle.registrationNo);
+    return this.httpClient.delete(`${this.baseUrl}/${id}`);
   }
-  // public addVehicle(values)
-  // {
-  //   console.log('vehicle added!');
-  //   return this.httpClient.post<Vehicle[]>('http://localhost:9090/vehicle/addvehicle', values);
-  // }
+ 
   public addVehicle(vehicle)
   {
     if  (this.count < 3)
