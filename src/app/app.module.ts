@@ -14,6 +14,8 @@ import { AllVehiclesListComponent} from './all-vehicles-list/all-vehicles-list.c
 import { DriversdetailsComponent } from './dailyhelp/driversdetails/driversdetails.component';
 import { DailyhelpComponent } from './dailyhelp/dailyhelp.component';
 import { MaidsdetailsComponent } from './dailyhelp/maidsdetails/maidsdetails.component';
+import { AlldetailsComponent } from './dailyhelp/alldetails/alldetails.component';
+import { AdddailyhelpComponent } from './dailyhelp/adddailyhelp/adddailyhelp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { MaidsdetailsComponent } from './dailyhelp/maidsdetails/maidsdetails.com
     AllVehiclesListComponent,
     DriversdetailsComponent,
     DailyhelpComponent,
-    MaidsdetailsComponent
+    MaidsdetailsComponent,
+    AlldetailsComponent,
+    AdddailyhelpComponent
   ],
   imports: [
     BrowserModule,

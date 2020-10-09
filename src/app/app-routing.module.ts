@@ -9,16 +9,20 @@ import { AllVehiclesListComponent } from './all-vehicles-list/all-vehicles-list.
 import { DriversdetailsComponent } from './dailyhelp/driversdetails/driversdetails.component';
 import { DailyhelpComponent } from './dailyhelp/dailyhelp.component';
 import { MaidsdetailsComponent } from './dailyhelp/maidsdetails/maidsdetails.component';
+import { AlldetailsComponent } from './dailyhelp/alldetails/alldetails.component';
+import { AdddailyhelpComponent } from './dailyhelp/adddailyhelp/adddailyhelp.component';
+
 const routes: Routes = [
   { path: 'all-vehicles-list/list', component: VehicleComponent},
-  // { path: '', component: VehicleComponent},
-   {path: 'all-vehicles-list', component: AllVehiclesListComponent},
+  {path: 'all-vehicles-list', component: AllVehiclesListComponent},
   { path: 'all-vehicles-list/addvehicle', component: AddvehicleComponent },
   { path: 'all-vehicles-list/update-vehicle/:id', component: UpdatevehicleComponent},
   
-  {path: 'dailyhelp/driversdetails', component: DriversdetailsComponent},
+  {path: 'dailyhelp/adddailyhelp/driversdetails', component: DriversdetailsComponent},
   {path: 'dailyhelp', component: DailyhelpComponent},
-  {path: 'dailyhelp/maidsdetails', component: MaidsdetailsComponent}
+  {path: 'dailyhelp/adddailyhelp/maidsdetails', component: MaidsdetailsComponent},
+  {path: 'dailyhelp/alldetails', component: AlldetailsComponent},
+  {path: 'dailyhelp/adddailyhelp', component: AdddailyhelpComponent},
 ];
 
 @NgModule({
