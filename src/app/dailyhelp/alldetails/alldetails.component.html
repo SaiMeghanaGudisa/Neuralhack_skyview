@@ -14,11 +14,11 @@
     </thead>
     <tbody>
         <tr *ngFor="let helper of help">
-          <td *ngIf="!helper.status && helper.id<11">{{helper.name}}</td>            
-          <td *ngIf="!helper.status && helper.id<11">Driver</td>
+          <td *ngIf="helper.status && helper.id<11">{{helper.name}}</td>            
+          <td *ngIf="helper.status && helper.id<11">Driver</td>
           
-          <td *ngIf="!helper.status && helper.id>10">{{helper.name}}</td>            
-          <td *ngIf="!helper.status && helper.id>10">Maid</td> 
+          <td *ngIf="helper.status && helper.id>10">{{helper.name}}</td>            
+          <td *ngIf="helper.status && helper.id>10">Maid</td> 
             
           
         </tr>
