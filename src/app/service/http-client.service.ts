@@ -25,19 +25,19 @@ export class HttpClientService {
   count = 0;
   getVehicles(): Observable<Vehicle[]>
   {
-    return this.httpClient.get<Vehicle[]>('http://localhost:9090/vehicle/getvehicles');
+    return this.httpClient.get<Vehicle[]>(`${this.baseUrl}`);
   }
   getVehicle(id: number): Observable<any> {
-    return this.httpClient.get('http://localhost:9090/vehicle/getvehicles/'+ id);
+    return this.httpClient.get(`${this.baseUrl}/${id}`);
   }
   
   public updateVehicle(id, vehicle)
   {
     console.log('vehicle details updated');
-    return this.httpClient.put(`${this.baseUrl}/${id}`,vehicle);
+    return this.httpClient.put(`${this.baseUrl}/${id}`, vehicle);
   }
 
-  deleteVehicle(id)
+  deleteVehicle(id: number)
   {
     this.count--;
     console.log(this.count + 'vehicle details deleted');

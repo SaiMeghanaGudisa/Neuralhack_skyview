@@ -9,13 +9,11 @@ import { HttpClientService, Vehicle} from '../service/http-client.service';
 export class AddvehicleComponent implements OnInit {
 
   user: Vehicle = new Vehicle('','', '', '', '');
-  //user: Vehicle = new Vehicle();
+  
   constructor(private httpClientService: HttpClientService,
     private router: Router) { }
 
-  ngOnInit(): void{
-    
-  }
+  ngOnInit(): void{}
 
   addVehicle(): void {
     console.log(this.user);
@@ -28,13 +26,6 @@ export class AddvehicleComponent implements OnInit {
   vehiclesList()
   {
     this.router.navigate(['/list']);
-
   }
-  // updateVehicle(): void{
-  //   this.httpClientService.updateVehicle(this.user)
-  //   .subscribe(data => {
-  //     alert('vehicle added successfully');
-  //   });
-  // }
 
 }
