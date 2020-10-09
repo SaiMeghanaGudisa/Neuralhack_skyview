@@ -25,7 +25,7 @@ export class VehicleComponent implements OnInit {
   }
 
   add=function(){
-    this.router.navigate(['/addvehicle']);
+    this.router.navigate(['/all-vehicles-list/addvehicle']);
   }
 
   deleteVehicle(id: number): void{
@@ -34,7 +34,7 @@ export class VehicleComponent implements OnInit {
   }
   
   updateVehicle(id:number){
-      this.router.navigate(['update-vehicle',id]);
+      this.router.navigate(['all-vehicles-list/update-vehicle', id]);
   }
 
 

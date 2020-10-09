@@ -17,10 +17,6 @@ export class UpdatevehicleComponent implements OnInit {
   ngOnInit(): void {
     this.user = new Vehicle('','','','','');
     this.id = this.route.snapshot.params['id'];
-
-    // this.httpClientService.getVehicle(this.id)
-    // .subscribe(data => this.user = new Vehicle('','','','',''));
-    // this.vehiclesList();
   }
 
   updateVehicle(){
@@ -32,7 +28,7 @@ export class UpdatevehicleComponent implements OnInit {
 
   vehiclesList()
   {
-    this.router.navigate(['/list']);
+    this.router.navigate(['/all-vehicles-list/list']);
 
   }
 

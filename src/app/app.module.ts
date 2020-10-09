@@ -5,23 +5,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { VehicleComponent } from './vehicle/vehicle.component';
-import { AddvehicleComponent } from './addvehicle/addvehicle.component';
-import { UpdatevehicleComponent } from './updatevehicle/updatevehicle.component';
-
+import { VehicleComponent } from './all-vehicles-list/vehicle/vehicle.component';
+import { AddvehicleComponent } from './all-vehicles-list/addvehicle/addvehicle.component';
+import { UpdatevehicleComponent } from './all-vehicles-list/updatevehicle/updatevehicle.component';
+import { AllVehiclesListComponent} from './all-vehicles-list/all-vehicles-list.component';
 @NgModule({
   declarations: [
     AppComponent,
     VehicleComponent,
     AddvehicleComponent,
-    UpdatevehicleComponent
+    UpdatevehicleComponent,
+    AllVehiclesListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

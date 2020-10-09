@@ -25,7 +25,7 @@ export class AddvehicleComponent implements OnInit {
 
   vehiclesList()
   {
-    this.router.navigate(['/list']);
+    this.router.navigate(['all-vehicles-list//list']);
   }
 
 }
