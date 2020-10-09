@@ -1,0 +1,25 @@
+<div class="card offset-md-1" style="margin-top: 10px;" *ngFor="let driver of help">
+    
+    <div *ngIf="driver.id<11" class="card-body ">
+        <span><h3>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{driver.name}}</h3></span>
+        <span><h3>Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{driver.age}}</h3></span>
+        <span><h3>Gender:&nbsp;&nbsp;{{driver.gender}}</h3></span>
+        <span><h3>Contact:&nbsp;&nbsp;{{driver.phno}}</h3></span>
+
+        <div class="text-center">    
+
+        <div *ngIf="driver.status; else elseBlock">
+            <button class="btn btn-info" id="more" (click)="driver.status = !driver.status; unselect(driver,driver.id)">
+                Unselect
+              </button>
+        </div>
+        <ng-template #elseBlock>
+            <button class="btn btn-info" id="more" (click)="driver.status = !driver.status; select(driver,driver.id)">
+                Select
+              </button>
+        </ng-template>
+
+      </div>
+      
+    </div>
+  </div>
