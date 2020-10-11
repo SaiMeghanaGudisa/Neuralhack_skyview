@@ -1,0 +1,38 @@
+<!-- <p>viewprofile works!</p> -->
+
+<!-- <div class="col-12 col-md-8 offset-md-2">
+    <div *ngFor="let member of residents">
+        <div><h6>Name:</h6>  <h6>{{member.name}}</h6></div>
+        <div><h6>Age:</h6>  <h6>{{member.age}}</h6></div>
+        <button class="btn btn-info" (onclick)="editprofile(member.residentId)">Edit</button>
+    </div>
+</div> -->
+
+<div class="col-12 col-md-4 offset-md-4"> 
+   
+    <table *ngFor="let member of residents">
+    
+    <tr>
+      <td><h4>Name:</h4></td>
+      <td><h4>{{member.name}}</h4></td>
+    </tr>
+
+
+    <tr>
+        <td><h4>Age:</h4></td>
+        <td><h4>{{member.age}}</h4></td>
+    </tr>
+    
+    <tr>
+        <td><h4>Contact No:</h4></td>
+        <td><h4>{{member.phno}}</h4></td>
+    </tr>
+
+    <tr>
+        <td><h4>Email:</h4></td>
+        <td><h4>{{member.email}}</h4></td>
+      </tr>
+      
+      <button class="btn btn-info" (click)="editprofile(member.residentId)">Edit profile</button>
+      </table>
+  </div>

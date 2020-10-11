@@ -1,0 +1,34 @@
+<div class="col-md-6 offset-md-3">
+    <h2>Edit profile</h2>
+    <form (ngSubmit)="update()">
+
+        <div class="form-group">
+            <label for="resid">Resident Id: </label>
+            <input class="form-control" type="text" placeholder="Enter Resident Id" name="resid" 
+            [(ngModel)]="resident.residentId" #type="ngModel" id="resid">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name: </label>
+            <input class="form-control" type="text" placeholder="Enter name" name="name" 
+            [(ngModel)]="resident.name" #type="ngModel" id="name">
+        </div>
+        <div class="form-group">
+            <label for="age">Age: </label>
+            <input class="form-control" type="text" placeholder="Enter age" name="age" 
+            [(ngModel)]="resident.age" #type="ngModel" id="age">
+        </div>
+        <div class="form-group">
+            <label for="phno">Contact No: </label>
+            <input class="form-control" type="text" placeholder="Enter contact no" name="phno" 
+            [(ngModel)]="resident.phno" #type="ngModel" id="phno">
+        </div>
+        <div class="form-group">
+            <label for="email">Email ID: </label>
+            <input class="form-control" type="text" placeholder="Enter email" name="email" 
+            [(ngModel)]="resident.email" #type="ngModel" id="email">
+        </div>
+
+        <button class="btn btn-info">Update Profile</button>
+    </form>
+</div>

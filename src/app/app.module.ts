@@ -16,6 +16,10 @@ import { DailyhelpComponent } from './dailyhelp/dailyhelp.component';
 import { MaidsdetailsComponent } from './dailyhelp/maidsdetails/maidsdetails.component';
 import { AlldetailsComponent } from './dailyhelp/alldetails/alldetails.component';
 import { AdddailyhelpComponent } from './dailyhelp/adddailyhelp/adddailyhelp.component';
+
+import { ProfileComponent } from './profile/profile.component';
+import { ViewprofileComponent } from './profile/viewprofile/viewprofile.component';
+import { EditprofileComponent } from './profile/editprofile/editprofile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,10 @@ import { AdddailyhelpComponent } from './dailyhelp/adddailyhelp/adddailyhelp.com
     DailyhelpComponent,
     MaidsdetailsComponent,
     AlldetailsComponent,
-    AdddailyhelpComponent
+    AdddailyhelpComponent,
+    ProfileComponent,
+    ViewprofileComponent,
+    EditprofileComponent
   ],
   imports: [
     BrowserModule,
