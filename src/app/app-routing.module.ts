@@ -17,6 +17,7 @@ import { AdddailyhelpComponent } from './dailyhelp/adddailyhelp/adddailyhelp.com
 import { ProfileComponent } from './profile/profile.component';
 import { ViewprofileComponent } from './profile/viewprofile/viewprofile.component';
 import { EditprofileComponent } from './profile/editprofile/editprofile.component';
+import { HomepageComponent } from './homepage/homepage.component';
 const routes: Routes = [
   { path: 'all-vehicles-list/list', component: VehicleComponent},
   {path: 'all-vehicles-list', component: AllVehiclesListComponent},
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path: 'profile/view', component: ViewprofileComponent},
   {path: 'profile', component: ProfileComponent},
   
+  {path: '', component: HomepageComponent}
 ];
 
 @NgModule({

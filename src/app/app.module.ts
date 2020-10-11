@@ -20,6 +20,8 @@ import { AdddailyhelpComponent } from './dailyhelp/adddailyhelp/adddailyhelp.com
 import { ProfileComponent } from './profile/profile.component';
 import { ViewprofileComponent } from './profile/viewprofile/viewprofile.component';
 import { EditprofileComponent } from './profile/editprofile/editprofile.component';
+
+import { HomepageComponent } from './homepage/homepage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { EditprofileComponent } from './profile/editprofile/editprofile.componen
     AdddailyhelpComponent,
     ProfileComponent,
     ViewprofileComponent,
-    EditprofileComponent
+    EditprofileComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
