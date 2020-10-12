@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { Dailyhelp, HttpClientService } from '../http-client.service';
 @Component({
   selector: 'app-driversdetails',
@@ -10,7 +11,7 @@ export class DriversdetailsComponent implements OnInit {
 
   help: Observable<Dailyhelp[]>;
 
-  constructor(private httpClientService: HttpClientService) { }
+  constructor(private httpClientService: HttpClientService, private router:Router) { }
 
   ngOnInit(): void {
     this.httpClientService.getPersons().subscribe(
@@ -33,6 +34,11 @@ export class DriversdetailsComponent implements OnInit {
     console.log(id + ' status changed!');
     this.httpClientService.changeStatusToUnselect(driver, id)
     .subscribe(data => {});
+  }
+
+  drivers()
+  {
+    this.router.navigate(['/dailyhelp/alldetails']);
   }
 
 }

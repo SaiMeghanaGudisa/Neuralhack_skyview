@@ -33,6 +33,10 @@ export class EditprofileComponent implements OnInit {
   {
     this.router.navigate(['/profile/view']);
   }
+  home()
+  {
+    this.router.navigate(['/profile/view']);
+  }
 
 
 }

@@ -1,8 +1,9 @@
 <div class="col-md-6 offset-md-3">
     <h2 class="text-center">Update Vehicle</h2>
+    <button class="alignright btn btn-success" (click)="vehiclesList()">My vehicles</button>
     <form #vehiclesForm="ngForm" (ngSubmit)="updateVehicle()">
   
-      <div class="form-group">
+      <div class="form-group" style="padding-top: 20px;">
         <label for="residentId">Resident Id: </label>
         <input class="form-control" type="text" placeholder="id" name="id" id="residentId" [(ngModel)]="user.residentId">
   
@@ -51,7 +52,8 @@
       <!-- <div class="form-group">
       <button class="btn btn-success" [disabled]="!vehiclesForm.form.valid" (click)="addVehicle()">Add</button>
     </div> -->
-    <button class="btn btn-success" [disabled]="!vehiclesForm.form.valid">Update</button>
+    <button class="alignleft btn btn-success" [disabled]="!vehiclesForm.form.valid">Update</button>
+    <button class="alignright btn btn-secondary" (click)="home()">Home</button>
     </form>
   </div>
   

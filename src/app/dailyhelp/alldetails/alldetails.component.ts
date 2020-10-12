@@ -25,5 +25,9 @@ export class AlldetailsComponent implements OnInit {
     this.router.navigate(['/dailyhelp/adddailyhelp']);
     // this.router.navigate(['/dailyhelp/driversdetails']);
   }
+  home()
+  {
+    this.router.navigate(['/profile/view']);
+  }
 
 }

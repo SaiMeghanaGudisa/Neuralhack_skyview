@@ -4,3 +4,13 @@
 .span{
     text-align: center;
 }
+
+.textcenter{
+    float:center;
+}
+.alignright{
+    float:right;
+    margin-right: 500px;
+    margin-top: 10px;
+    margin-left: 5px;
+}

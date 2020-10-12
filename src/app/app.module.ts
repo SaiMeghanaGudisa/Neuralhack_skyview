@@ -22,6 +22,10 @@ import { ViewprofileComponent } from './profile/viewprofile/viewprofile.componen
 import { EditprofileComponent } from './profile/editprofile/editprofile.component';
 
 import { HomepageComponent } from './homepage/homepage.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,14 +41,17 @@ import { HomepageComponent } from './homepage/homepage.component';
     ProfileComponent,
     ViewprofileComponent,
     EditprofileComponent,
-    HomepageComponent
+    HomepageComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

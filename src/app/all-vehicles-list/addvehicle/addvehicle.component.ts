@@ -28,4 +28,9 @@ export class AddvehicleComponent implements OnInit {
     this.router.navigate(['all-vehicles-list/list']);
   }
 
+  home()
+  {
+    this.router.navigate(['/profile/view']);
+  }
+
 }

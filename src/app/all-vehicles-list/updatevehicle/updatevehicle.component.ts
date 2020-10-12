@@ -29,7 +29,10 @@ export class UpdatevehicleComponent implements OnInit {
   vehiclesList()
   {
     this.router.navigate(['/all-vehicles-list/list']);
-
+  }
+  home()
+  {
+    this.router.navigate(['/profile/view']);
   }
 
 }

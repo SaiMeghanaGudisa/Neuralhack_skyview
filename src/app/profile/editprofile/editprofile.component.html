@@ -1,7 +1,11 @@
+
+<!-- <button><mat-icon>keyboard_backspace</mat-icon></button> -->
+<!-- <button><mat-icon>arrow_back</mat-icon></button> -->
+<!-- <button class="btn btn-secondary" (click)="home()">Home</button> -->
 <div class="col-md-6 offset-md-3">
     <h2>Edit profile</h2>
     <form (ngSubmit)="update()">
-
+        
         <div class="form-group">
             <label for="resid">Resident Id: </label>
             <input class="form-control" type="text" placeholder="Enter Resident Id" name="resid" 
@@ -29,6 +33,9 @@
             [(ngModel)]="resident.email" #type="ngModel" id="email">
         </div>
 
-        <button class="btn btn-info">Update Profile</button>
+        <div>
+        <button class="alignleft btn btn-info">Update Profile</button>
+        <button class="alignright btn btn-secondary" (click)="home()">Home</button>
+        </div>
     </form>
 </div>

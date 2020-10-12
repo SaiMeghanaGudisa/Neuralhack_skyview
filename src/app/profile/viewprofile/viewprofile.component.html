@@ -8,31 +8,41 @@
     </div>
 </div> -->
 
-<div class="col-12 col-md-4 offset-md-4"> 
-   
+
+<div class="sidenav">
+    <a href="./profile/view">My Profile</a>
+    <a href="all-vehicles-list/list">My Vehicles</a>
+    <a href="dailyhelp/alldetails">Daily Help</a>
+    <a href="#">Family Members</a>
+    <a href="#">Helpdesk Ticket</a>
+    <a href="#">Discussion Forum</a>
+  </div>
+
+<div class="elements col-12 col-md-4 offset-md-4"> 
+
     <table *ngFor="let member of residents">
     
     <tr>
-      <td><h4>Name:</h4></td>
-      <td><h4>{{member.name}}</h4></td>
+      <td><h2>Name:</h2></td>
+      <td><h3>{{member.name}}</h3></td>
     </tr>
 
 
     <tr>
-        <td><h4>Age:</h4></td>
-        <td><h4>{{member.age}}</h4></td>
+        <td><h2>Age:</h2></td>
+        <td><h3>{{member.age}}</h3></td>
     </tr>
     
     <tr>
-        <td><h4>Contact No:</h4></td>
-        <td><h4>{{member.phno}}</h4></td>
+        <td><h2>Contact No:</h2></td>
+        <td><h3>{{member.phno}}</h3></td>
     </tr>
 
     <tr>
-        <td><h4>Email:</h4></td>
-        <td><h4>{{member.email}}</h4></td>
+        <td><h2>Email:</h2></td>
+        <td><h3>{{member.email}}</h3></td>
       </tr>
       
-      <button class="btn btn-info" (click)="editprofile(member.residentId)">Edit profile</button>
+      <button class="btn btn-info aligncenter" (click)="editprofile(member.residentId)">Edit profile</button>
       </table>
   </div>

@@ -1,4 +1,9 @@
 
+
+<button class="alignright btn btn-success" (click)="maids()">List</button><br><br>
+<h2 class="text-center" style="padding-top: 15px;">Select Maids</h2>
+
+
 <div class="card offset-md-1" style="margin-top: 10px;" *ngFor="let maid of help">
     
     <div *ngIf="maid.id>10" class="card-body">
@@ -22,7 +27,6 @@
               </button>
         </ng-template>
 
-      </div>
-      
+      </div>     
     </div>
   </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Dailyhelp, HttpClientService } from '../http-client.service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-maidsdetails',
   templateUrl: './maidsdetails.component.html',
@@ -10,7 +11,7 @@ export class MaidsdetailsComponent implements OnInit {
 
   help: Observable<Dailyhelp[]>;
 
-  constructor(private httpClientService: HttpClientService) { }
+  constructor(private httpClientService: HttpClientService, private router:Router) { }
 
   ngOnInit(): void {
     this.httpClientService.getPersons().subscribe(
@@ -34,5 +35,7 @@ export class MaidsdetailsComponent implements OnInit {
     .subscribe(data => {});
   }
 
-
+  maids(){
+    this.router.navigate(['/dailyhelp/alldetails']);
+  }
 }
