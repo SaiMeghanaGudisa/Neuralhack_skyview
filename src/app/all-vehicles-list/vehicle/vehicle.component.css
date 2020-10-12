@@ -2,3 +2,9 @@
     color:blue;
     size: 30px;
 } */
+
+.alignleft{
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}

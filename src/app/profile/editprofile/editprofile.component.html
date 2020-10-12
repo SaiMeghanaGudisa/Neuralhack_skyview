@@ -2,9 +2,11 @@
 <!-- <button><mat-icon>keyboard_backspace</mat-icon></button> -->
 <!-- <button><mat-icon>arrow_back</mat-icon></button> -->
 <!-- <button class="btn btn-secondary" (click)="home()">Home</button> -->
-<div class="col-md-6 offset-md-3">
+<button class="alignleft btn btn-secondary" (click)="home()">Home</button>
+<div class="col-md-6 offset-md-3" style="padding-top: 40px;">
+    
     <h2>Edit profile</h2>
-    <form (ngSubmit)="update()">
+    <form (ngSubmit)="update()" style="padding-top: 10px;">
         
         <div class="form-group">
             <label for="resid">Resident Id: </label>
@@ -35,7 +37,7 @@
 
         <div>
         <button class="alignleft btn btn-info">Update Profile</button>
-        <button class="alignright btn btn-secondary" (click)="home()">Home</button>
+        <!-- <button class="alignright btn btn-secondary" (click)="home()">Home</button> -->
         </div>
     </form>
 </div>

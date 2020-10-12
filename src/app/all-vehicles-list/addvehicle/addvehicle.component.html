@@ -1,6 +1,8 @@
+<button class="home btn btn-secondary">Home</button>
+
 <div class="col-md-6 offset-md-3">
-  <h2 class="text-center" style="padding-top: 15px;">Add Vehicle</h2>
-  <button class="alignright btn btn-success" (click)="vehiclesList()">My vehicles</button>
+  <h2 class="text-center" style="padding-top: 40px;">Add Vehicle</h2>
+  
   <form #vehiclesForm="ngForm" (ngSubmit)="addVehicle()">
 
     <div class="form-group" style="padding-top: 20px;">
@@ -49,6 +51,6 @@
     </div>
 
   <button class="alignleft btn btn-success" [disabled]="!vehiclesForm.form.valid">Add</button>
-  <button class="alignright btn btn-secondary" (click)="home()">Home</button>
+  <button class="alignright btn btn-success" (click)="vehiclesList()">My vehicles</button>
   </form>
 </div>

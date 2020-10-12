@@ -9,7 +9,14 @@
 
 .alignright{
     float:right;
-    margin-right: 500px;
+    margin-right: 530px;
+    margin-top: 50px;
+    
+}
+.home{
+    margin-left: 10px;
     margin-top: 10px;
-    margin-left: 5px;
+}
+h2{
+    text-align: center;
 }

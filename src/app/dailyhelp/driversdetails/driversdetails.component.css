@@ -4,13 +4,16 @@
 .span{
     text-align: center;
 }
-
-.textcenter{
-    float:center;
+h2{
+    text-align: center;
 }
 .alignright{
     float:right;
-    margin-right: 500px;
+    margin-right: 450px;
+    margin-top: 40px;
+    
+}
+.home{
+    margin-left: 10px;
     margin-top: 10px;
-    margin-left: 5px;
 }

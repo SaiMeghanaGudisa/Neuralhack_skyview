@@ -19,7 +19,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
 .sidenav{
   height: 100%;
-  width: 15%;
+  width: 250px;
   font: 100px;
 position: fixed;
 text-align: center;
@@ -27,12 +27,13 @@ background-color:black;
 color: white;
 overflow-x: hidden;
 padding-top: 100px;
+
 }
 .sidenav a:hover {
   color: #f1f1f1;
 }
 .sidenav a {
-padding: 6px 8px 6px 16px;
+padding: 6px 10px 25px 16px;
 text-decoration: double;
 font-size: 20px;
 color: #818181;

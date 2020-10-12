@@ -1,3 +1,11 @@
 .aligncenter{
     float: center;
 }
+.home{
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+h2{
+    margin-left: 580px;
+}

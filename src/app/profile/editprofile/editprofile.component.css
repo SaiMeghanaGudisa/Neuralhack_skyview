@@ -4,6 +4,8 @@ h2{
 
 .alignleft {
 	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
 }
 .alignright {
 	float: right;

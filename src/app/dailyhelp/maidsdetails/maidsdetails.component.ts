@@ -38,4 +38,8 @@ export class MaidsdetailsComponent implements OnInit {
   maids(){
     this.router.navigate(['/dailyhelp/alldetails']);
   }
+  home()
+  {
+    this.router.navigate(['/profile/view']);
+  }
 }

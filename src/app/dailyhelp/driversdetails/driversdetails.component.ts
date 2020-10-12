@@ -40,5 +40,9 @@ export class DriversdetailsComponent implements OnInit {
   {
     this.router.navigate(['/dailyhelp/alldetails']);
   }
+  home()
+  {
+    this.router.navigate(['/profile/view']);
+  }
 
 }
