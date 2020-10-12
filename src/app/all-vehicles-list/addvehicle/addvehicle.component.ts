@@ -17,9 +17,10 @@ export class AddvehicleComponent implements OnInit {
 
   addVehicle(): void {
     console.log(this.user);
+    this.vehiclesList();
     this.httpClientService.addVehicle(this.user)
     .subscribe(data => {
-      this.vehiclesList();
+      // this.vehiclesList();
     });
   }
 

@@ -37,6 +37,7 @@ export class VehicleComponent implements OnInit {
       this.router.navigate(['all-vehicles-list/update-vehicle', id]);
   }
 
+
   home()
   {
     this.router.navigate(['/profile/view']);
