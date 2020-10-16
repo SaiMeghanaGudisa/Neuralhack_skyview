@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./viewprofile.component.css']
 })
 export class ViewprofileComponent implements OnInit {
-
+  
   residents: Observable<Residents[]>;
   constructor(private httpClientService: HttpClientService,
     private router: Router) { }
@@ -28,6 +28,11 @@ export class ViewprofileComponent implements OnInit {
   {
     console.log("navigated to edit page");
     this.router.navigate(['profile/edit', id]);
+  }
+
+  logout()
+  {
+    this.router.navigate(['/']);
   }
 
 }

@@ -8,7 +8,6 @@
     </div>
 </div> -->
 
-
 <div class="sidenav">
     <a href="./profile/view">My Profile</a>
     <a href="all-vehicles-list/list">My Vehicles</a>
@@ -17,11 +16,11 @@
     <a href="#">Helpdesk Ticket</a>
     <a href="#">Discussion Forum</a>
   </div>
-
+<button class="btn btn-secondary logout" (click)="logout()">Logout</button>
 <div class="elements col-12 col-md-4 offset-md-4"> 
 
     <table *ngFor="let member of residents">
-    
+        <table *ngIf="member.residentId == 101">
     <tr>
       <td><h2>Name:</h2></td>
       <td><h3>{{member.name}}</h3></td>
@@ -43,6 +42,15 @@
         <td><h3>{{member.email}}</h3></td>
       </tr>
       
-      <button class="btn btn-info aligncenter" (click)="editprofile(member.residentId)">Edit profile</button>
-      </table>
+    <!-- <tr>
+      <td><button class="btn btn-info aligncenter" (click)="editprofile(member.residentId)">Edit profile</button></td>
+      <td><button class="btn btn-secondary aligncenter" (click)="logout()">Logout</button></td>
+    </tr> -->
+       
+    <button class="btn btn-info aligncenter" (click)="editprofile(member.residentId)">Edit profile</button>
+    
+    </table>  
+    </table>
+
   </div>
+  

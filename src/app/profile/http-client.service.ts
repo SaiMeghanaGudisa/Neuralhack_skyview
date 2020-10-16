@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 export class Residents {
   constructor(
-    public residentId: string,
+    // public residentId: string,
     public name: string,
     public age: string,
     public phno: string,

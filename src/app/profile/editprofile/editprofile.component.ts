@@ -17,7 +17,7 @@ export class EditprofileComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.resident = new Residents('','','','','');
+    this.resident = new Residents('','','','');
     this.id = this.route.snapshot.params['id'];
   }
 

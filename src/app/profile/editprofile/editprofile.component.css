@@ -10,3 +10,6 @@ h2{
 .alignright {
 	float: right;
 }
+.aligncenter{
+	float: center;
+}
