@@ -20,6 +20,12 @@ import { EditprofileComponent } from './profile/editprofile/editprofile.componen
 
 import { HomepageComponent } from './homepage/homepage.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+
+import { FamilyComponent } from './family/family.component';
+import { AddmemberComponent } from './family/addmember/addmember.component';
+import { MemberslistComponent } from './family/memberslist/memberslist.component';
+import { UpdatememberComponent } from './family/updatemember/updatemember.component';
+
 const routes: Routes = [
   { path: 'all-vehicles-list/list', component: VehicleComponent},
   {path: 'all-vehicles-list', component: AllVehiclesListComponent},
@@ -35,8 +41,12 @@ const routes: Routes = [
   {path: 'profile/edit/:id', component: EditprofileComponent},
    {path: 'profile/view', component: ViewprofileComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: '', component: HomepageComponent}
+  {path: '', component: HomepageComponent},
 
+  {path: 'family', component: FamilyComponent},
+  {path: 'family/memberslist', component: MemberslistComponent},
+  {path: 'family/addmember', component: AddmemberComponent},
+  {path: 'family/update-member/:id', component: UpdatememberComponent}
   // {path: '', component: HomepageComponent},
   // {path: 'login', component: SidebarComponent, children:[
   // {path: 'view', component: ViewprofileComponent},

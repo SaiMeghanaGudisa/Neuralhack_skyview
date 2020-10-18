@@ -1,0 +1,67 @@
+<!-- <p>updatemember works!</p> -->
+
+<button class="home btn btn-secondary"(click)="home()">Home</button>
+
+<div class="col-md-6 offset-md-3">
+  <h2 class="text-center" style="padding-top: 40px;">Update Member</h2>
+  
+  <form #familyForm="ngForm" (ngSubmit)="updateMember()">
+
+    <div class="form-group" style="padding-top: 20px;">
+      <label for="residentId">Resident Id: </label>
+      <input class="form-control" type="text" placeholder="Enter resident id here" name="id" id="residentId" [(ngModel)]="user.residentId">
+    </div>
+
+    <div class="form-group">
+      <label for="name"><span class="asterisk">*</span>Name: </label>
+      <input class="form-control" type="text" placeholder="Enter name of family member here" name="name" #name="ngModel" id="name" 
+      required minlength="1" [(ngModel)]="user.name" required>
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+        <div *ngIf="name.errors.required">
+          Name is required.
+        </div>       
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="age"><span class="asterisk">*</span>Age: </label>
+      <input class="form-control" type="text" placeholder="Enter age here" name="age" #age="ngModel" 
+      id="age" required minlength="2" [(ngModel)]="user.age" required>
+
+      <div *ngIf="age.invalid && (age.dirty || age.touched)" class="alert alert-danger">
+        <div *ngIf="age.errors.required">
+          Age is required.
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email"><span class="asterisk">*</span>Email: </label>
+      <input class="form-control" type="text" placeholder="Enter email here" name="email" #email="ngModel" 
+      required minlength="4" id="vehicleMake" [(ngModel)]="user.email" required>
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+        <div *ngIf="email.errors.required">
+          Vehicle model is required.
+        </div>  
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="phno"><span class="asterisk">*</span>Contact No: </label>
+        <input class="form-control" type="text" placeholder="Enter contact number here" name="phno" #phno="ngModel" 
+        required minlength="10" id="phno" [(ngModel)]="user.phno" required>
+        <div *ngIf="phno.invalid && (phno.dirty || phno.touched)" class="alert alert-danger">
+          <div *ngIf="phno.errors.required">
+            Contact Number is required.
+          </div>
+          <div *ngIf="phno.errors.minlength">
+            Contact number must be 10 characters long.
+          </div>
+        </div>
+      </div>
+
+      <button class="alignleft btn btn-success" [disabled]="!familyForm.form.valid">Update</button>
+      <!-- <button class="alignright btn btn-success" (click)="familyList()">My family</button> -->
+  </form>
+</div>

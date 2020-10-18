@@ -1,0 +1,37 @@
+<!-- <p>memberslist works!</p> -->
+
+
+<button class="alignleft btn btn-secondary" (click)="home()">Home</button>
+
+ <h2 class="text-center" style="padding-top: 40px;">My Family</h2>
+ 
+ <div class="col-12 col-md-8 offset-md-2"> 
+    <table class="table table-striped">
+    <thead>
+      <br><br>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>Contact</th>
+      &nbsp;&nbsp;
+      <button class="btn btn-info" (click)="add()">Add</button>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let member of members">
+            <td>{{member.name}}</td>            
+            <td>{{member.age}}</td>
+            <td>{{member.email}}</td>
+            <td>{{member.phno}}</td>
+            
+             <td><button class="btn btn-danger" (click)="deleteMember(member.id)"> Delete</button></td> 
+             <td><button class="btn btn-success" (click)="updateMember(member.id)"> Update</button></td> 
+
+            </tr>
+    </tbody>
+      </table>
+      <!-- <div class="text-right"> 
+        <button class="home btn btn-secondary" (click)="home()">Home</button>
+    </div>  -->
+  </div>

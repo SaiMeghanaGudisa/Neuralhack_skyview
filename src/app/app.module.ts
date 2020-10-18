@@ -27,6 +27,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { FamilyComponent } from './family/family.component';
+import { AddmemberComponent } from './family/addmember/addmember.component';
+import { MemberslistComponent } from './family/memberslist/memberslist.component';
+import { UpdatememberComponent } from './family/updatemember/updatemember.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +49,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ViewprofileComponent,
     EditprofileComponent,
     HomepageComponent,
-    SidebarComponent
+    SidebarComponent,
+    FamilyComponent,
+    AddmemberComponent,
+    MemberslistComponent,
+    UpdatememberComponent
   ],
   imports: [
     BrowserModule,

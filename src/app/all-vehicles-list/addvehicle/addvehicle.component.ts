@@ -8,7 +8,7 @@ import { HttpClientService, Vehicle} from '../service/http-client.service';
 })
 export class AddvehicleComponent implements OnInit {
 
-  user: Vehicle = new Vehicle('','', '', '', '');
+  user: Vehicle = new Vehicle('', '', '', '', '');
   
   constructor(private httpClientService: HttpClientService,
     private router: Router) { }

@@ -12,7 +12,7 @@ export class UpdatevehicleComponent implements OnInit {
   user: Vehicle;
   id: number;
 
-  constructor(private route: ActivatedRoute,private router: Router,private httpClientService: HttpClientService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private httpClientService: HttpClientService) { }
 
   ngOnInit(): void {
     this.user = new Vehicle('','','','','');
