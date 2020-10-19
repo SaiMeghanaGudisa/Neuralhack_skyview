@@ -13,15 +13,21 @@ h1{
   background-repeat: no-repeat;
   background-size: cover;
 }
-.card{
+.card2{
     margin-left: 20px;
     margin-bottom: 30px;
     size:20px;
     text-align: start;
     padding-bottom: 30px;;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
 }  
 
+.card1{
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-right: 10px;
+    text-align: center;
+}
 img{
     height: 250px;
     width: 250px;

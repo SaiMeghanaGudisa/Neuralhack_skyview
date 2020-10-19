@@ -1,10 +1,11 @@
 <button class="home btn btn-secondary" (click)="home()">Home</button>
 
 <div class="col-md-6 offset-md-3">
-    <h2 class="text-center" style="padding-top: 40px;">Update Vehicle</h2>
+    <h2 class="text-center" style="padding-top: 100px;">Update Vehicle</h2>
     
     <form #vehiclesForm="ngForm" (ngSubmit)="updateVehicle()">
   
+      
       <div class="form-group" style="padding-top: 20px;">
         <label for="residentId">Resident Id: </label>
         <input class="form-control" type="text" placeholder="id" name="id" id="residentId" [(ngModel)]="user.residentId">

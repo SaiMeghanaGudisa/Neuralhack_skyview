@@ -26,6 +26,8 @@ import { AddmemberComponent } from './family/addmember/addmember.component';
 import { MemberslistComponent } from './family/memberslist/memberslist.component';
 import { UpdatememberComponent } from './family/updatemember/updatemember.component';
 
+import { ConstructionComponent } from './construction/construction.component';
+
 const routes: Routes = [
   { path: 'all-vehicles-list/list', component: VehicleComponent},
   {path: 'all-vehicles-list', component: AllVehiclesListComponent},
@@ -39,14 +41,16 @@ const routes: Routes = [
   {path: 'dailyhelp/adddailyhelp', component: AdddailyhelpComponent},
 
   {path: 'profile/edit/:id', component: EditprofileComponent},
-   {path: 'profile/view', component: ViewprofileComponent},
+  {path: 'profile/view', component: ViewprofileComponent},
   {path: 'profile', component: ProfileComponent},
   {path: '', component: HomepageComponent},
 
   {path: 'family', component: FamilyComponent},
   {path: 'family/memberslist', component: MemberslistComponent},
   {path: 'family/addmember', component: AddmemberComponent},
-  {path: 'family/update-member/:id', component: UpdatememberComponent}
+  {path: 'family/update-member/:id', component: UpdatememberComponent},
+
+  {path: 'construction',component: ConstructionComponent}
   // {path: '', component: HomepageComponent},
   // {path: 'login', component: SidebarComponent, children:[
   // {path: 'view', component: ViewprofileComponent},

@@ -31,6 +31,7 @@ export class HttpClientService {
   public updateVehicle(id, vehicle)
   {
     console.log('vehicle details updated');
+    alert("Vehicle details updated successfully");
     return this.httpClient.put(`${this.baseUrl}/${id}`, vehicle);
   }
 

@@ -1,0 +1,29 @@
+/* .construct{
+    margin-top: 150px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font: 300px;
+} */
+
+
+/* img{
+    background-repeat: no-repeat; 
+    
+} */
+img{
+    /* background-color: #F8D03B; */
+    /* align-content: center; */
+    display: block;
+  margin: 0 auto;
+  /* width: 50%; */
+}
+body{
+    background-color: #F2C72A;
+}
+.home{
+    margin-top: 70px;
+    margin-left: 10px;
+    float: left;
+}

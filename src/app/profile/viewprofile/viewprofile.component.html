@@ -1,24 +1,16 @@
-<!-- <p>viewprofile works!</p> -->
-
-<!-- <div class="col-12 col-md-8 offset-md-2">
-    <div *ngFor="let member of residents">
-        <div><h6>Name:</h6>  <h6>{{member.name}}</h6></div>
-        <div><h6>Age:</h6>  <h6>{{member.age}}</h6></div>
-        <button class="btn btn-info" (onclick)="editprofile(member.residentId)">Edit</button>
-    </div>
-</div> -->
 
 <div class="sidenav">
     <a href="./profile/view">My Profile</a>
     <a href="all-vehicles-list/list">My Vehicles</a>
     <a href="dailyhelp/alldetails">Daily Help</a>
     <a href="family/memberslist">Family Members</a>
-    <a href="#">Helpdesk Ticket</a>
-    <a href="#">Discussion Forum</a>
+    <a href="construction">Helpdesk Ticket</a>
+    <a href="construction">Discussion Forum</a>
   </div>
+  <!-- <h1><b>My Profile</b></h1> -->
 <button class="btn btn-secondary logout" (click)="logout()">Logout</button>
-<div class="elements col-12 col-md-4 offset-md-4"> 
-
+<div class="elements col-12 col-md-4 offset-md-5"> 
+  <h1>My Profile</h1>
     <table *ngFor="let member of residents">
         <table *ngIf="member.residentId == 101">
     <tr>

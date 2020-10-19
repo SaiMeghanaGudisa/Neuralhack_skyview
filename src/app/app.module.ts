@@ -32,6 +32,7 @@ import { FamilyComponent } from './family/family.component';
 import { AddmemberComponent } from './family/addmember/addmember.component';
 import { MemberslistComponent } from './family/memberslist/memberslist.component';
 import { UpdatememberComponent } from './family/updatemember/updatemember.component';
+import { ConstructionComponent } from './construction/construction.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { UpdatememberComponent } from './family/updatemember/updatemember.compon
     FamilyComponent,
     AddmemberComponent,
     MemberslistComponent,
-    UpdatememberComponent
+    UpdatememberComponent,
+    ConstructionComponent
   ],
   imports: [
     BrowserModule,

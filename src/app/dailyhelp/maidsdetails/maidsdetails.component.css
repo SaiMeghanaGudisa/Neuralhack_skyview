@@ -2,11 +2,6 @@
     display:inline-block;
 }
 
-/* .alignleft{
-    float:left;
-    margin: 10px;
-} */
-
 .alignright{
     float:right;
     margin-right: 530px;
@@ -15,7 +10,7 @@
 }
 .home{
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 70px;
 }
 h2{
     text-align: center;

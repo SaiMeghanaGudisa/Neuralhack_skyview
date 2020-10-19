@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title = 'vehicle-details';
+   title = 'SkyView24x7';
   // faCoffee = faCoffee;
 }

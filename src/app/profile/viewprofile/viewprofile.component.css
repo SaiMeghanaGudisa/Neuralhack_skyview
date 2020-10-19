@@ -5,14 +5,12 @@ tr{
     border: none;
 }
 .elements{
-  padding-top: 150px;
+  padding-top: 100px;
 }
-/* .card{
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-} */
+h1{
+  padding-left: 80px;
+  padding-bottom: 10px;
+}
 
 .sidenav{
   height: 100%;
@@ -45,7 +43,7 @@ display: block;
   float:right;
 }
 .logout{
-    margin-top: 10px;
+    margin-top: 70px;
     margin-right: 10px;
     float: right;
 }

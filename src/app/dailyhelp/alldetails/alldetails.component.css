@@ -2,10 +2,14 @@
     float: center;
 }
 .home{
-    margin-top: 10px;
+    margin-top: 70px;
     margin-left: 10px;
     float: left;
 }
 h2{
     margin-left: 580px;
+}
+.select{
+    margin:0 auto;
+    display:block;
 }
