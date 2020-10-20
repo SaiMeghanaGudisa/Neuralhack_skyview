@@ -7,18 +7,21 @@ import { HttpClientService, Vehicle} from '../service/http-client.service';
   styleUrls: ['./updatevehicle.component.css']
 })
 export class UpdatevehicleComponent implements OnInit {
-
-  //user: Vehicle = new Vehicle('','', '', '', '');
   user: Vehicle;
   id: number;
 
   constructor(private route: ActivatedRoute, private router: Router, private httpClientService: HttpClientService) { }
 
   ngOnInit(): void {
-    this.user = new Vehicle('','','','','');
     this.id = this.route.snapshot.params['id'];
+    this.httpClientService.getVehicle(this.id).subscribe(
+      response => this.handleSuccessfulResponse(response)
+    );
   }
 
+  handleSuccessfulResponse(response): void{
+    this.user = response;
+  }
   updateVehicle(){
     this.httpClientService.updateVehicle(this.id, this.user)
     .subscribe(data => {

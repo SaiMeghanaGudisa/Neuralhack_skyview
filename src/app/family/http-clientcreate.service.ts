@@ -31,6 +31,9 @@ export class HttpClientcreateService {
       alert('Member added successfully!');
       return this.httpClient.post<Family>('http://localhost:9090/family/addmember', member);
   }
+  getMember(id: number){
+    return this.httpClient.get(`${this.baseUrl}/${id}`);
+  }
 
   deleteMember(id: number)
   {

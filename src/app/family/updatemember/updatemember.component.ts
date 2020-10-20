@@ -13,8 +13,13 @@ export class UpdatememberComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private httpClientService: HttpClientcreateService) { }
 
   ngOnInit(): void {
-    this.user = new Family('', '', '', '', '', '');
     this.id = this.route.snapshot.params['id'];
+    this.httpClientService.getMember(this.id).subscribe(
+      response => this.handleSuccessfulResponse(response)
+    );
+  }
+  handleSuccessfulResponse(response): void{
+    this.user = response;
   }
 
   updateMember(){

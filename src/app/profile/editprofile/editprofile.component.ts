@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { Observable } from 'rxjs';
 import { Residents, HttpClientService } from '../http-client.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -9,7 +8,6 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./editprofile.component.css']
 })
 export class EditprofileComponent implements OnInit {
-
   id: number;
   resident: Residents;
   constructor(private httpClientService: HttpClientService,
@@ -17,8 +15,13 @@ export class EditprofileComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.resident = new Residents('','','','');
     this.id = this.route.snapshot.params['id'];
+    this.httpClientService.getResident(this.id).subscribe(
+      response => this.handleSuccessfulResponse(response)
+    );
+  }
+  handleSuccessfulResponse(response): void{
+    this.resident = response;
   }
 
   update()

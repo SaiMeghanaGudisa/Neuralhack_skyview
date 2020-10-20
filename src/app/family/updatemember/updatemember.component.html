@@ -2,17 +2,12 @@
 
 <button class="home btn btn-secondary"(click)="home()">Home</button>
 
-<div class="col-md-6 offset-md-3">
-  <h2 class="text-center" style="padding-top: 40px;">Update Member</h2>
+<div class="col-md-4 offset-md-4">
+  <h2 class="text-center" style="padding-top: 100px;">Update Member</h2>
   
   <form #familyForm="ngForm" (ngSubmit)="updateMember()">
 
-    <div class="form-group" style="padding-top: 20px;">
-      <label for="residentId">Resident Id: </label>
-      <input class="form-control" type="text" placeholder="Enter resident id here" name="id" id="residentId" [(ngModel)]="user.residentId">
-    </div>
-
-    <div class="form-group">
+   <div class="form-group">
       <label for="name"><span class="asterisk">*</span>Name: </label>
       <input class="form-control" type="text" placeholder="Enter name of family member here" name="name" #name="ngModel" id="name" 
       required minlength="1" [(ngModel)]="user.name" required>
@@ -62,6 +57,6 @@
       </div>
 
       <button class="alignleft btn btn-success" [disabled]="!familyForm.form.valid">Update</button>
-      <!-- <button class="alignright btn btn-success" (click)="familyList()">My family</button> -->
+      <button class="alignright btn btn-success" (click)="membersList()">My family</button>
   </form>
 </div>

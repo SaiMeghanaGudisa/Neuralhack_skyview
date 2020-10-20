@@ -26,6 +26,9 @@ export class HttpClientService {
       return this.httpClient.get<Residents[]>(`${this.baseUrl}`);
   }
 
+  getResident(id: number): Observable<any> {
+    return this.httpClient.get(`${this.baseUrl}/${id}`);
+  }
   updateProfile(id, member)
   {
     console.log("profile updated!");
